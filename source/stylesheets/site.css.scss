@@ -1,32 +1,54 @@
 @import "compass";
-
-$link-color:         #0388a6;
-$link-hover-color:   #009ce0;
-$link-focus-color:   false;
-$link-active-color:  false;
-$link-visited-color: false;
-
-$font-color:  #2a2a2a;
-$font-family: sans-serif;
-$base-font-size:   12px;
-$base-line-height: 18px;
-
-$total-cols: 12;
-$col-width: 4em;
-$gutter-width: 1em;
-$side-gutter-width: $gutter-width;
-
 @include global-reset;
 
-body {
-  font-family: $font-family;
-  color: $font-color; 
+body{
+  background:#fff;
 }
 
-a {
-  @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
+#parallax{
+  position:fixed;
+  z-index:1;
+  overflow: hidden;
+  top:0;
+  width: 100%;
+  height: 100%;
+  
+  .stage {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    margin-left: -400px;
+  }
+  
+  div {
+    position: absolute;
+    height: 300px;
+    width: 800px;
+    
+    & #blue, & #yellow {
+      z-index: 3;
+      display:none;
+    }
+  }
+  
 }
 
-#main {
-  padding: 50px;
+#wrapper {
+  position: relative;
+  z-index: 2;
+  width:800px;
+  margin:auto;
+  
+  #first, #second, #third, #forth, #fifth, #sixth{
+    clear:both;
+    margin:50px 0 0;
+  }
+  
+  p {
+    margin-top:10px;
+  }
+  
+  img {
+    margin:5px;
+  }
 }
