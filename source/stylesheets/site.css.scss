@@ -20,15 +20,38 @@ body{
     margin-left: -400px;
   }
   
-  div {
+  #blue, #yellow, #brown, #green, #grey, #black  { 
     position: absolute;
-    height: 300px;
+  }
+  #blue {
+    background: blue;
+    top: 0px;
+  }
+  #yellow { 
+    background: yellow;
+    top: 250px; 
+  }
+  #brown {
+    background: brown;
+    top: 500px;
+  }
+  #green {
+    background: green;
+    top: 750px;
+  }
+  #grey {
+    background: grey;
+    top: 1000px;
+  }
+  #black {
+    background: black;
+    top: 1250px;
+  }
+  
+  div {
+    height: 200px;
     width: 800px;
-    
-    & #blue, & #yellow {
-      z-index: 3;
-      display:none;
-    }
+
   }
   
 }

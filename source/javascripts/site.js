@@ -2,51 +2,34 @@ $(function() {
 	
 	"use strict";
 	
-	var $this = this,
-		offset = []
+	$('#blue')
+		.parallax({
+			'speed': 0.75
+		});
 	
+	$('#yellow')
+		.parallax({
+			'speed': 0.65
+		});
 
+	$('#brown')
+		.parallax({
+			'speed': 0.15
+		});
 		
-		// $(element)[0].scrollHeight
+	$('#green')
+		.parallax({
+			'speed': -1.85
+		});
+	
+	$('#grey')
+		.parallax({
+			'speed': -2.75
+		});
 		
-	$(window)
-		.bind('scroll', function(e, offset) {
-			// console.log($('body')[0].scrollHeight, $('body').height(), );
-			switch(e.type) {
+	$('#black')
+		.parallax({
+			'speed': -3.95
+		});
 
-				case 'scroll':
-				
-
-					$('#blue')
-						.css({
-							'top': (($('#blue').offset().top + $(window).scrollTop()) / 5)
-						});
-					$('#yellow')
-						.css({
-							'top': (($('#yellow').offset().top + $(window).scrollTop()) / 7)
-						});
-					$('#brown')
-						.css({
-							'top': $(window).scrollTop()
-						});
-					$('#grey')
-						.css({
-							'top': (($('#grey').offset().top + $(window).scrollTop()) / 11)
-						});
-					$('#black')
-						.css({
-							'top': (($('#black').offset().top + $(window).scrollTop()) / 13)
-						});	
-						
-						console.log($('#brown').offset().top - $(window).scrollTop(), $('#brown').offset().top);
-					
-				default:				
-					break;
-			}
-			
-			
-		});	
-		
-		//$('body')[0].scrollHeight - $(window).scrollTop()
-console.log($('#brown').offset().top - $(window).scrollTop(), $('#brown').offset().top);
 });
