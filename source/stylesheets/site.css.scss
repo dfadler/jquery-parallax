@@ -16,14 +16,8 @@ body{
   .stage {
     position: relative;
     width: 100%;
-    left: 50%;
-    margin-left: -400px;
   }
-  
-  #blue, #yellow, #brown, #green, #grey, #black  { 
-    position: absolute;
-    left:0;
-  }
+
   #blue {
     background: blue;
     top: 0px;
@@ -52,7 +46,10 @@ body{
   div {
     height: 200px;
     width: 800px;
-
+    left: 50%;
+    margin-left: -400px;
+    position: absolute;
+    left:0;
   }
   
 }
