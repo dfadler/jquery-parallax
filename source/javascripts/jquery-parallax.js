@@ -10,9 +10,7 @@
 			opts = $.extend({}, $.fn.parallax.defaults, options),
 			newCoord = null,
 			windowTop = $(window).scrollTop();
-		
-		console.log(origin);
-		
+
 		$this
 			.css({
 				'top': origin
